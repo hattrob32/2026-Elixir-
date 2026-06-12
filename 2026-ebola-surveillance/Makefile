@@ -41,9 +41,6 @@ genome:
 	wget -O ${GFF}.gz ${GFF_URL}
 	gunzip -f ${FASTA}.gz
 	gunzip -f ${GFF}.gz
-	bwa index ${FASTA}
-
-# Download the reads from SRA
 fastq:
 	mkdir -p fastq
 	fastq-dump -X ${LIMIT} --outdir fastq --split-files ${SRR}
